@@ -7,9 +7,14 @@ from playsound import playsound
 import signal
 import colorama
 
-linecount = None
-with open('Body.csv','r') as lines:
-    linecount = len(lines.readlines())
+linecount = 1
+
+try:
+    with open('Body.csv','r') as lines:
+        linecount = len(lines.readlines())
+except:
+    with open('Body.csv','w') as lines:
+        lines.write('MessageNum,text,\n')
 
 generator = Faker()
 csvFile = open('Body.csv','a',newline='')
