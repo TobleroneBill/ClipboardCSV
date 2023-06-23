@@ -1,0 +1,5 @@
+colorama==0.4.6
+Faker==18.11.1
+keyboard==0.13.5
+playsound==1.2.2
+pyperclip==1.8.2
